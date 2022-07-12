@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>即時人像去除背景系統基於複數深度學習圖像分割模型</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.lp.css">
+	<link rel="stylesheet" type="text/css" href="css/landing-page.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+	<link rel="stylesheet" type="text/css" href="css/styleTest.css">
+</head>
+
+<body>
+	<!----------------------------------- Dividing line----------------------------------------------------->
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand topnav" href="https://myweb.ntut.edu.tw/~tjhsieh/">
+                ♪ 國立臺北科技大學 ♪ 資訊工程系 ♪ 計算機圖學實驗室 ♪</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#top">回頂端</a>
+                    </li>
+					<li>
+                        <a href="#demo1">摘要</a>
+                    </li>
+					<li>
+                        <a href="#demo2">引用文獻</a>
+                    </li>
+                    <li>
+                        <a href="#demo3">示範</a>
+                    </li>
+					
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="top"></a>
+    <div class="intro-header">
+        <div class="container" style="height:350px;">
+
+            <div class="row">
+                <div class="col-lg-12" style="height:300px;">
+                    <div class="intro-message" style="position: relative;padding-top: 0%;padding-bottom: 70%;">
+                        <h1>即時人像去除背景系統基於複數深度學習圖像分割模型</h1>
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="demo.html" class="btn btn-default btn-lg"> 
+                                    <span class="network-name" style="font-weight: 900;">進入系統</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+	<a  name="demo1"></a>
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+					<h2 class="section-heading">摘要</h2>
+					<p class="lead">	隨著時代的進步以及近期疫情流行，逐漸出現虛擬背景攝影的需求。儘管現代有圖片編輯技術，也有許多視訊會議軟體或服務提供虛擬背景服務，但實際上品質優良、具即時性，且可以單獨在本機運行的去背軟體相當少。<br>優良、可用的即時去背技術大多都在 JS API 等網頁開發資源，並且未必開源，常規程式語言的現有資源則較少。對於虛擬背景攝影而言，攝影師能在按下快門前就看到去背後的預覽畫面，是一項重要的需求。因此，即時去背技術的重點在於，保證品質的同時有夠高的即時性，可以跟原畫面同步呈現去背後畫面。<br>虛擬背景攝影需要能在本地運行的去背軟體，研究也以此為重心。本研究嘗試使用網路上現有的複數語義分割模型，通過互相彌補各自在去背功能上的不足，實作兼具品質、效能的即時去背功能。
+					</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <img class="img-responsive" src="img/name.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a  name="demo2"></a>	
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">引用文獻</h2>
+					<p class="lead">語義分割<br><br>
+						DeepLabV3<br><br>
+						Google 研究團隊於2017年發表相關論文，在準度上略勝獲得 "ImageNet Scene Parsing Challenge 2016" 第一名的 PSPNet。在 PyTorch 提供的 implementation 中，PyTorch Team 基於3種 backbone (ResNet-50, ResNet-101, MobileNetV3 Large)，分別訓練出了3種模型，並經由 Torch Hub 以供利用，並撰寫了範例程式碼。而其中，基於 MobileNetV3 Large 的模型，在 RTX3080Ti 上可達到30FPS。<br><br>
+						物件偵測<br><br>
+						YOLOv5<br><br>
+						尚未有相關論文釋出，但其為開發中的新版 YOLO 模型，目前大致上仍和有發表過論文的 YOLOv4不相上下，但速度方面有些微的優勢。基於可能造成混淆的疑慮，在此處不放上 YOLOv4 論文中的預測結果圖片。<br>
+						實際上 YOLOv5 也有由 Ultralytics 直接提供給 PyTorch，因此同樣可藉 Torch Hub 等進行存取、使用，但本研究在開發時並未注意到這點，而是利用原專案的程式及模型。<br><br>
+						實例分割<br><br>
+						YOLACT<br><br>
+						首個可實現即時實例分割的模型，也是至今為止少數可實現實例分割的模型之一。Backbone 採用 RetinaNet，由 ResNet 和 FPN 組成，官方釋出的訓練模型有基於不同 backbone 組合而得的不同模型，各模型間的速度和準度成反比。<br>
+						Mask R-CNN<br><br>
+						實例分割模型中，準度數一數二，可以當作理想標準參考的模型。其速度在 RTX3080Ti 上為 0.125FPS，實屬無法用於即時去背的緩慢，惟其準度具有相當的參考價值，在此特別提及。</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+                    <img class="img-responsive" src="paper-img/all_results.png" alt="DeepLabV3">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+	
+	<a name="demo3"></a>
+	<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+					<h2 class="section-heading">示範</h2>
+					<p class="lead">總結來說，兩個系統在6公尺內都能有一定程度的準度保障，但前者會保留所有模型在像素缺失方面的缺點，並且3公尺以上準度就會開始不穩定，後者則沒有顯著缺點。也就是說，若要實作30FPS的人像去背，目前是實例分割略勝一籌。</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<br><br><br>
+					<img class="img-responsive" src="paper-img/1655698486.1478627_output.jpg" alt="實例分割系統結果">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+	
+
+	
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-12">
+                    <hr>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright text-muted small"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright text-muted small">
+			論文題目，
+
+            由<a xmlns:cc="http://creativecommons.org/ns#" href="http://www.cc.ntut.edu.tw/~tjhsieh/" property="cc:attributionName" rel="cc:attributionURL">國立臺北科技大學資訊工程系計算機圖學實驗室</a>製作，
+			以<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">創用CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a>釋出。
+			姓名標示-非商業性-相同方式分享 CC BY-NC-SA
+			本授權條款允許使用者對本著作進行重混、調整，以及依原著作建立新著作，但僅限於非商業目的之使用。唯使用者就其新創著作，必須按照表彰
+			原作：國立臺北科技大學資訊工程系計算機圖學實驗室，並且將產出之新創著作採用相同的授權條款釋出。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="lib/jquery-2.1.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="lib/bootstrap.min.js"></script>
+
+	
+	
+	
+	
+	
+</body>
+</html>
